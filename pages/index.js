@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import AboutUS from "../app/project/Home/AboutUS";
+import ActivityType from "../app/project/Home/ActivityType";
 
 function Home({}) {
   const [showChild, setShowChild] = useState(false);
@@ -14,8 +16,8 @@ function Home({}) {
   return (
     <>
       <div className="body">
-        <div>test
-        </div>
+        <AboutUS/>
+        <ActivityType/>
       </div>
     </>
   );

@@ -75,7 +75,6 @@ function MyApp({ Component, pageProps }) {
               <Menu />
               <Component {...pageProps} />
             </div>
-            <div id="__modal"></div>
             <Footer />
           </ReState>
         </UserProvider>
