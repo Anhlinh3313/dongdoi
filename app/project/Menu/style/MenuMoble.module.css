@@ -86,16 +86,19 @@
     height: 100%;
     width: 156px;
 }
+
 @media only screen and (max-width: 1050px) {
     .img {
-      object-fit: none;
+        object-fit: none;
     }
-  }
-  @media only screen and (max-width: 380px) {
+}
+
+@media only screen and (max-width: 380px) {
     .img {
         object-fit: contain;
     }
-  }
+}
+
 /*  */
 .menu_mobile_bottom {
     width: 100%;

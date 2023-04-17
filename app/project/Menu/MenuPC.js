@@ -27,109 +27,65 @@ const MenuPC = () => {
     });
   }, [typeof window !== "undefined" && window]);
 
-  useEffect(() => {
-    fetch(`${API_URL}/api/menu/getAll`)
-      .then((res) => res.json())
-      .then((data) => {
-        const menu = data?.map((item, i) => {
-          return {
-            element: (route) => {
-              return (
-                <li className={stylesCss["navbar-item"]}>
-                  <Link href={`/${item.menuSlug}`} key={item._id}>
-                    <a className={stylesCss["headerLink"]}>
-                      <div className={stylesCss["menu-item-title"]}>
-                        <p className={stylesCss["m-0"]}>{item.menuName}</p>
-                        {/*{item.children.length > 0 && (
-                          <div className={Styles.menu_sub}>
-                            {item.children.length > 0 &&
-                              item.children.map((children1) => {
-                                return (
-                                  <Link
-                                    href={`/${item.menuSlug}/${children1.menuSlug}`}
-                                    key={children1._id}
-                                  >
-                                    <div
-                                      style={{
-                                        padding: "0px 0px",
-                                        width: "100%",
-                                      }}
-                                      className={Styles.menu_sub_item}
-                                    >
-                                      <div
-                                        style={{
-                                          display: "flex",
-                                          alignItems: "center",
-                                          height: "100%",
-                                          width: "100%",
-                                          justifyContent: "space-between",
-                                          padding: "0px 15px",
-                                        }}
-                                        className={Styles.menu_sub_item_menu}
-                                      >
-                                        {children1.menuName}
-                                        <IconArrow />
-                                        {children1.children.length > 0 && (
-                                          <div
-                                            className={
-                                              Styles.menu_sub_item_menu2_sub
-                                            }
-                                          >
-                                            {children1.children.length > 0 &&
-                                              children1.children.map(
-                                                (children2) => {
-                                                  return (
-                                                    <Link
-                                                      href={`/${item.menuSlug}/${children1.menuSlug}/${children2.menuSlug}`}
-                                                      key={children2._id}
-                                                    >
-                                                      <div
-                                                        className={
-                                                          Styles.menu_sub_item_menu2_sub_item
-                                                        }
-                                                      >
-                                                        {children2.menuName}
-                                                      </div>
-                                                    </Link>
-                                                  );
-                                                }
-                                              )}
-                                          </div>
-                                        )}
-                                      </div>
-                                    </div>
-                                  </Link>
-                                );
-                              })}
-                          </div>
-                        )} */}
-                      </div>
-                    </a>
-                  </Link>
-                </li>
-              );
-            },
-            event: () => {},
-            status: true,
-            path: `/${item.menuSlug}`,
-          };
-        }); 
-        setMenuBottom(menu);
-      });
-  }, []);
+  const menuList = [
+    {
+      element: (
+        <Link href={"/tin-tuc"}>
+          <a>
+            <div className={Styles.menu_bottom_item}>TIN TỨC - SỰ KIỆN</div>
+          </a>
+        </Link>
+      ),
+      event: () => { },
+      status: true,
+      path: "tin-tuc",
+    },
+    {
+      element: (
+        <Link href={"/ve-chung-toi"}>
+          <a>
+            <div className={Styles.menu_bottom_item}>VỀ CHÚNG TÔI</div>
+          </a>
+        </Link>
+      ),
+      event: () => { },
+      status: true,
+      path: "ve-chung-toi",
+    },
+    {
+      element: (
+        <Link href={"/linh-vuc"}>
+          <a>
+            <div className={Styles.menu_bottom_item}>CÁC LĨNH VỰC HOẠT ĐỘNG</div>
+          </a>
+        </Link>
+      ),
+      event: () => { },
+      status: true,
+      path: "linh-vuc",
+    },
+    {
+      element: (
+        <Link href={"/lien-he"}>
+          <a>
+            <div className={Styles.menu_bottom_item}>LIÊN HỆ</div>
+          </a>
+        </Link>
+      ),
+      event: () => { },
+      status: true,
+      path: "lien-he",
+    },
+  ]
 
   return (
     <>
-     <div>
+      <div>
         <div className={stylesCss["menu-container"]}>
           <div className={stylesCss["navMenu-container"]}>
             <ul className={stylesCss["menu-warpper"]}>
-              {menuBottom?.map((val, key) => {
-                return (
-                  <Fragment key={key}>
-                    {val.element(route.asPath === val.path ? true : false)}
-                  </Fragment>
-                );
+              {menuList?.map((val, key) => {
+                return <Fragment key={key}>{val.element}</Fragment>;
               })}
             </ul>
           </div>

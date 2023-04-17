@@ -94,7 +94,7 @@
   background-color: rgba(128, 128, 128, 0.164);
 }
 
-.header_menu_top_search_icon{
+.header_menu_top_search_icon {
   position: absolute;
   top: 20%;
   left: 5%;
@@ -147,7 +147,7 @@
   padding: 19px 0 18px 0;
   font-size: 14px;
   line-height: 100%;
-  color: #626262;
+  color: #000000;
   font-weight: 700;
   position: relative;
   white-space: nowrap;
