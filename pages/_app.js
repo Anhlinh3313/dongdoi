@@ -11,7 +11,7 @@ import "../styles/europe-odds.scss";
 
 import ReState from "@useState/ReState";
 import Menu from "../app/project/Menu";
-import Footer from "../app/project/Footer/Footer";
+// import Footer from "../app/project/Footer/Footer";
 import { Router } from "next/router";
 import { useState, useEffect } from "react";
 import HomeSchema from "../app/project/HomeSchema";
@@ -76,7 +76,7 @@ function MyApp({ Component, pageProps }) {
               <Component {...pageProps} />
             </div>
             <div id="__modal"></div>
-            <Footer />
+            {/* <Footer /> */}
           </ReState>
         </UserProvider>
       </GoogleOAuthProvider>

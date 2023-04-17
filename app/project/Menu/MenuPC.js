@@ -5,17 +5,14 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import { API_URL } from "@function/wsCode";
 import Styles from "./style/Menupc.module.css";
 import { useRouter } from "next/router";
 import IconTop from "./IconMenu/IconTop";
 import stylesCss from "../../../styles/MenuCSS/Menu.module.css";
-import logo from "../../../public/logo.png"
 
 const MenuPC = () => {
   const route = useRouter();
   const [menuScroll, setMenuScroll] = useState(false);
-  const [menuBottom, setMenuBottom] = useState([]);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -31,7 +28,7 @@ const MenuPC = () => {
   const menuList = [
     {
       element: (
-        <Link href={"/tin-tuc"}>
+        <Link href={"#section-event"}>
           <a>
             <div className={Styles.menu_bottom_item}>TIN TỨC - SỰ KIỆN</div>
           </a>
@@ -43,7 +40,7 @@ const MenuPC = () => {
     },
     {
       element: (
-        <Link href={"/ve-chung-toi"}>
+        <Link href={"#about"}>
           <a>
             <div className={Styles.menu_bottom_item}>VỀ CHÚNG TÔI</div>
           </a>
@@ -84,7 +81,7 @@ const MenuPC = () => {
       <div>
         <div className={stylesCss["menu-container"]}>
           <div className={stylesCss["navMenu-container"]}>
-            <img className={stylesCss.logo} src={logo.src} alt="logo" />
+            <img className={stylesCss.logo} src="./logo.png" alt="logo" />
             <ul className={stylesCss["menu-warpper"]}>
               {menuList?.map((val, key) => {
                 return <Fragment key={key}>{val.element}</Fragment>;
