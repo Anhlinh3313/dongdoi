@@ -1,0 +1,113 @@
+.details-match .compare-odds .ant-tabs {
+  margin: 1rem auto;
+}
+.details-match .ant-tabs-tab .ant-tabs-tab-btn {
+  padding: 2px 8px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.record {
+  flex: 1;
+}
+/* .record .ant-table-thead tr:nth-child(2) {
+  display: none;
+} */
+.details-match .ant-tabs-top > .ant-tabs-nav::before {
+  border-bottom: 0px transparent !important;
+}
+.details-match .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  border: 1px solid #e5e5e5;
+  padding: 2px 8px;
+  background: rgb(57, 127, 25);
+  border-radius: 4px;
+  color: white !important;
+  font-size: 14px !important;
+}
+.details-match .ant-tabs-ink-bar {
+  background: transparent !important;
+}
+.compare-odds .table-row-light {
+  background-color: #f4f4f4;
+}
+.compare-odds .table-row-dark {
+  background-color: #ffffff;
+}
+.table-row-light {
+  background-color: #f4f4f4 !important;
+}
+.table-row-dark {
+  background-color: #ffffff !important;
+}
+.compare-odds .ant-table-thead .ant-table-cell {
+  color: #666;
+  text-align: center;
+  line-height: 22px;
+  background-color: #e5e5e5;
+  border-top: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2;
+  border-left: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2 !important;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.compare-odds {
+  /* max-width: 1160px; */
+  font-size: 12px;
+  background-color: #ffffff;
+}
+.compare-odds .ant-table-tbody .ant-table-cell {
+  font-size: 12px;
+  text-align: center;
+  font-weight: normal;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2;
+  border-left: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2 !important;
+}
+.result {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+.customOddUp {
+  display: flex;
+  align-items: center;
+}
+.oddUps {
+  color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  text-align: right;
+  /* display: flex; */
+  align-items: center;
+}
+
+.customOddDown {
+  display: flex;
+  align-items: center;
+}
+.oddDowns {
+  color: red;
+  width: 60%;
+  text-align: right;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+.oddSame {
+  width: 60%;
+  text-align: right;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+.seeMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

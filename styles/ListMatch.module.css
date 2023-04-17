@@ -1,0 +1,152 @@
+.box-category {}
+
+.wrap-slide-ltt {
+    position: relative;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    min-height: 72px;
+    width: 100%;
+}
+
+.swiper-button-box-right {
+    right: 0;
+    width: 32px;
+    height: 100%;
+    background: #fff;
+    text-align: center;
+    top: 0;
+    z-index: 2;
+    line-height: 20px;
+    cursor: pointer;
+    position: absolute;
+    outline: none;
+    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
+
+.icon-right {
+    fill: #bdbdbd;
+    position: relative;
+    top: 42%;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.swiper-button-box-right:hover {
+  transform: scale(1.05);
+  background: #f7f7f7;
+}
+
+.swiper-button-box-left:hover {
+    transform: scale(1.05);
+    background: #f7f7f7;
+}
+
+.swiper-button-box-left {
+    left: 0;
+    width: 32px;
+    height: 100%;
+    background: #fff;
+    text-align: center;
+    top: 0;
+    z-index: 2;
+    line-height: 20px;
+    cursor: pointer;
+    position: absolute;
+    outline: none;
+    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
+
+.swiper-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+.swiper-wrapper {
+    transform: translate3d(20px, 0px, 0px);
+    transition-duration: 0ms;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform, -webkit-transform;
+}
+
+.swiper-slide {
+    white-space: nowrap;
+    height: auto;
+    font-size: 12px;
+    width: 170px;
+    padding: 12px 12px 5px 12px;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.time-row {
+    font-size: 14px;
+    margin-bottom: 17px;
+    width: 100%;
+    color: #939393;
+    line-height: 100%;
+    white-space: nowrap
+}
+
+.f-left {
+    flex-shrink: 1;
+    -webkit-box-align: center;
+}
+
+.nameteam {
+    padding-left: 6px;
+}
+
+.bulkHead:after {
+    height: calc(100% - 30px);
+}
+
+.swiper-slide::after {
+    width: 1px;
+    height: 100%;
+    background: #e5e5e5;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: calc(100% - 30px);
+}
+
+.fontImg {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.hometeam {
+    padding-bottom: 10px;
+}
+
+.awayteam {
+    padding-bottom: 10px;
+}
+
+.link-view-all{
+    display: flex;
+    position: relative;
+    color: #757575;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    padding: 9px 20px;
+    background: #f7f7f7;
+    border-radius: 3px;
+    top: 25%;
+    width: 110px;
+}

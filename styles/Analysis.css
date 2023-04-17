@@ -1,0 +1,35 @@
+#analyMap {
+    position: fixed;
+    top: 110px;
+    right: 26.5px;
+}
+#analyMap a:first-child {
+    background-color: #f60 !important;
+    text-decoration: none;
+}
+#analyMap a {
+    width: 66px;
+    text-align: center;
+    color: #fff;
+    line-height: 26px;
+    margin-bottom: 2px;
+    display: block;
+}
+#analyMap a {
+    background-color: #397f19;
+}
+#analyMap a:hover {
+    background-color: #f60;
+}
+:root {
+    --primary-color: #01b243;
+    --main-text-color: rgb(0, 0, 0);
+}
+.title-mane-number{
+    font-size: 12px;
+}
+
+.team-table-title{
+    display: flex;
+    justify-content: center;
+}
