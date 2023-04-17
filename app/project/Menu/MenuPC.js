@@ -10,6 +10,7 @@ import Styles from "./style/Menupc.module.css";
 import { useRouter } from "next/router";
 import IconTop from "./IconMenu/IconTop";
 import stylesCss from "../../../styles/MenuCSS/Menu.module.css";
+import logo from "../../../public/logo.png"
 
 const MenuPC = () => {
   const route = useRouter();
@@ -83,6 +84,7 @@ const MenuPC = () => {
       <div>
         <div className={stylesCss["menu-container"]}>
           <div className={stylesCss["navMenu-container"]}>
+            <img className={stylesCss.logo} src={logo.src} alt="logo" />
             <ul className={stylesCss["menu-warpper"]}>
               {menuList?.map((val, key) => {
                 return <Fragment key={key}>{val.element}</Fragment>;

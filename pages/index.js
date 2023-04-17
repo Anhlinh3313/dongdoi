@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import HomePage from "./home/index"
 
-function Home({}) {
+function Home({ }) {
   const [showChild, setShowChild] = useState(false);
-  
+
   useEffect(() => {
     setShowChild(true);
   }, []);
@@ -14,8 +15,7 @@ function Home({}) {
   return (
     <>
       <div className="body">
-        <div>test
-        </div>
+        <HomePage />
       </div>
     </>
   );

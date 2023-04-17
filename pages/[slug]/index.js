@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import VirtualList from "rc-virtual-list";
 import styles from "../../styles/tin-the-thao.module.css";
-import WatchMoreInfo from "../../app/project/WatchMoreInfo";
+// import WatchMoreInfo from "../../app/project/WatchMoreInfo";
 import { ConvertPath } from "../../helpers/functions";
 import Head from "next/head";
 import { menuTabFotball } from "../../app/@function/constant";
@@ -20,7 +20,7 @@ import clsx from "clsx";
 
 import { Row, Col, message, List, Divider, Icon } from "antd";
 import stylesChiTiet from "../../styles/chi-tiet-trang.module.css";
-import AddComment from "../../app/project/CommentList";
+// import AddComment from "../../app/project/CommentList";
 import { listDataOther } from "../../app/@function/constant";
 import "moment/locale/vi";
 import { Spin, Result, Button } from "antd";
@@ -176,37 +176,37 @@ const SportFootballInfo = ({
             <div className={styles.menutab}>
               {listMenuParent.length !== 0
                 ? listDataMenu &&
-                  listDataMenu.map((val, idx) => {
-                    return (
-                      <Link key={idx} href={`/${slug}/${val.pram}`}>
-                        <a>
+                listDataMenu.map((val, idx) => {
+                  return (
+                    <Link key={idx} href={`/${slug}/${val.pram}`}>
+                      <a>
+                        <div
+                          className={
+                            styles.menutabitem +
+                            " " +
+                            (route.query.pram === val.pram
+                              ? styles.menutabitemchecked
+                              : "")
+                          }
+                          key={idx}
+                        >
+                          <div className={styles.menutabitemtitle}>
+                            {val.title}
+                          </div>
                           <div
                             className={
                               styles.menutabitem +
                               " " +
                               (route.query.pram === val.pram
-                                ? styles.menutabitemchecked
+                                ? styles.menutabitemhoverchecked
                                 : "")
                             }
-                            key={idx}
-                          >
-                            <div className={styles.menutabitemtitle}>
-                              {val.title}
-                            </div>
-                            <div
-                              className={
-                                styles.menutabitem +
-                                " " +
-                                (route.query.pram === val.pram
-                                  ? styles.menutabitemhoverchecked
-                                  : "")
-                              }
-                            ></div>
-                          </div>
-                        </a>
-                      </Link>
-                    );
-                  })
+                          ></div>
+                        </div>
+                      </a>
+                    </Link>
+                  );
+                })
                 : null}
             </div>
           </div>
@@ -292,7 +292,7 @@ const SportFootballInfo = ({
                 </List>
               </Row>
             </Col>
-            <WatchMoreInfo listWatchMore={listFootballOrder ?? []} />
+            {/* <WatchMoreInfo listWatchMore={listFootballOrder ?? []} /> */}
           </Row>
         </div>
       </>
@@ -406,7 +406,7 @@ const SportFootballInfo = ({
                     </Link>
                   ))}
                 </Stack>
-                <AddComment />
+                {/* <AddComment /> */}
                 <Row style={{ marginTop: 30 }}>
                   <h2 className="title-content">Có thể bạn quan tâm</h2>
                   <List>
@@ -462,8 +462,8 @@ const SportFootballInfo = ({
                                 {checkTime(item?.createdTime) === true
                                   ? moment(item?.createdTime).fromNow()
                                   : moment(item?.createdTime)
-                                      .locale("vi")
-                                      .format(" hh:mm, DD/MM/YYYY")}
+                                    .locale("vi")
+                                    .format(" hh:mm, DD/MM/YYYY")}
                               </Text>
                             </Col>
                           </Row>

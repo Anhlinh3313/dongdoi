@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import VirtualList from "rc-virtual-list";
 import styles from "../../styles/tin-the-thao.module.css";
 import { Row, Col, List } from "antd";
-import WatchMoreInfo from "../../app/project/WatchMoreInfo";
+// import WatchMoreInfo from "../../app/project/WatchMoreInfo";
 import { ConvertPath } from "../../helpers/functions";
 import Head from "next/head";
 import { menuTabFotball } from "../../app/@function/constant";
@@ -45,7 +45,7 @@ const SportFootballInfo = ({
   const [pageSize, setPageSize] = useState(6);
   const [thisSlug, setSlug] = useState("");
   const [hasMore, setHasMore] = useState(
-    listFootball.length < pageSize-1 ? false : true
+    listFootball.length < pageSize - 1 ? false : true
   );
 
   useEffect(() => {
@@ -206,7 +206,7 @@ const SportFootballInfo = ({
               </List>
             </Row>
           </Col>
-          <WatchMoreInfo listWatchMore={listFootballOrder ?? []} />
+          {/* <WatchMoreInfo listWatchMore={listFootballOrder ?? []} /> */}
         </Row>
       </div>
     </>
