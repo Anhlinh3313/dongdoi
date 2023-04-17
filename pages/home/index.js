@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import banner from "../../public/banner.png";
 import styles from "../../styles/Home.module.css"
-import Deck from "./Deck";
+import Slides from "./Slides"
 
 function Home({ }) {
     const [showChild, setShowChild] = useState(false);
@@ -24,6 +24,10 @@ function Home({ }) {
                         <h1>Lan tỏa điều tốt đẹp</h1>
                     </div>
                 </div>
+                <div className={styles.event}>
+                    <Slides />
+                </div>
+
             </div>
         </>
     );

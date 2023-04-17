@@ -1,8 +1,8 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, Navigation } from "swiper/react";
 import "swiper/swiper.min.css";
-import "./styles.css";
 import SwiperCore, { EffectCoverflow } from "swiper/core";
+import styles from "../../styles/Home.module.css"
 SwiperCore.use([EffectCoverflow]);
 
 export default function Deck(props) {
@@ -19,6 +19,7 @@ export default function Deck(props) {
     return (
         <div>
             <Swiper
+                Navigation={true}
                 effect={"coverflow"}
                 grabCursor={false}
                 centeredSlides={true}
@@ -34,7 +35,7 @@ export default function Deck(props) {
                     slideShadows: true
                 }}
                 height={props.selected ? "300px" : "100px"}
-                className="mySwiper"
+                className={styles.mySwiper}
                 onClick={() => {
                     select();
                 }}
@@ -47,15 +48,19 @@ export default function Deck(props) {
                         key={index}
                         className={
                             props.selected
-                                ? "swiper-fixed-width-300 "
-                                : "swiper-fixed-width-100 "
+                                ? styles.swiper_fixed_width_300
+                                : styles.swiper_fixed_width_100
                         }
                     >
                         {({ isActive }) => (
                             <div>
-                                <div className="slide-overlay">
-                                    <div className="slide-text">
-                                        {isActive && props.selected ? "" : ""}
+                                <div className={styles.slide_overlay}>
+                                    <div className={styles.slide_text}>
+                                        {isActive && props.selected ? (
+                                            i
+                                        ) : (
+                                            ""
+                                        )}
                                     </div>
                                 </div>
                                 <div>
