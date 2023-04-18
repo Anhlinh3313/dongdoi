@@ -37,7 +37,7 @@ const HomeSchema = (props) => {
             name="description"
             content="dong doi"
           />
-          <link rel="icon" href="/Flogo.png" />
+          <link rel="icon" href="/logo.png" />
           <link
             rel="canonical"
             href={`${process.env.NEXT_PUBLIC_SCHEMA_URL}`}
