@@ -35,20 +35,20 @@ const HomeSchema = (props) => {
           </title>
           <meta
             name="description"
-            content="Web tin tức bóng đá, cập nhật liên tục 24h, nhanh nhất Việt nam"
+            content="dong doi"
           />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/Flogo.png" />
           <link
             rel="canonical"
             href={`${process.env.NEXT_PUBLIC_SCHEMA_URL}`}
           />
           <meta
             name="keywords"
-            content="bong da,bongda,tiso,nhan dinh bong da,lich thi dau, bóng đá, tỉ số"
+            content="dong doi"
           />
           <meta
             name="description"
-            content="Bóng đá: cập nhật tin tức bóng đá, nhận định bóng đá, lịch thi đấu"
+            content="dong doi"
           ></meta>
           <meta
             name="COPYRIGHT"
@@ -59,7 +59,7 @@ const HomeSchema = (props) => {
           <meta name="robots" content="index,follow,noydir,noodp"></meta>
           <meta
             property="og:description"
-            content="Bóng đá: cập nhật tin tức bóng đá, nhận định bóng đá, lịch thi đấu"
+            content="dong doi"
           ></meta>
           <meta
             property="og:site_name"
@@ -71,7 +71,7 @@ const HomeSchema = (props) => {
           ></meta>
           <meta
             property="og:title"
-            content="Thể thao 789 - Tin bóng đá, nhận định thể thao mới nhất"
+            content="dong doi"
           ></meta>
           <meta
             name="robots"

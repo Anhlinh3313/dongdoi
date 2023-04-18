@@ -18,8 +18,8 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_API_DOMAIN: "https://api.thethao789.com",
     // NEXT_PUBLIC_API_DOMAIN: "http://localhost:4444",
-    NEXT_PUBLIC_SCHEMA_NAME: "thethao789",
-    NEXT_PUBLIC_SCHEMA_URL: "https://thethao789.com",
+    NEXT_PUBLIC_SCHEMA_NAME: "dongdoi",
+    NEXT_PUBLIC_SCHEMA_URL: "https://dongdoi.com",
     NEXT_PUBLIC_SCHEMA_LOGO: "https://thethao789.b-cdn.net/logo-thethao789.png",
     NEXT_PUBLIC_BUNNY_URL: "https://thethao789.b-cdn.net",
   },

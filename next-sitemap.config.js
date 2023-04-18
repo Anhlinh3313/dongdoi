@@ -1,4 +1,4 @@
-const siteUrl = "https://thethao789.com";
+const siteUrl = "https://dongdoi.com";
 module.exports = {
   siteUrl,
   exclude: ["/404"],
@@ -7,7 +7,7 @@ module.exports = {
     policies: [
       {
         userAgent: "*",
-        disallow: ["/404", "admin.thethao789.com", "/readme.html"],
+        disallow: ["/404", "admin.dongdoi.com", "/readme.html"],
       },
       { userAgent: "*", allow: "/" },
     ],

@@ -1,7 +1,7 @@
 # *
 User-agent: *
 Disallow: /404
-Disallow: admin.thethao789.com
+Disallow: admin.dongdoi.com
 Disallow: /readme.html
 
 # *
@@ -9,8 +9,8 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://thethao789.com
+Host: https://dongdoi.com
 
 # Sitemaps
-Sitemap: https://thethao789.com/sitemap.xml
-Sitemap: https://thethao789.com/post-sitemap.xml
+Sitemap: https://dongdoi.com/sitemap.xml
+Sitemap: https://dongdoi.com/post-sitemap.xml
