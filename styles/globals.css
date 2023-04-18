@@ -21,20 +21,27 @@ a {
 
 
 .swiper-button-prev {
-  background: url("../public/btn-pre.png") no-repeat center center;
+  background-image: url("/btn-pre.png");
   width: 40px !important;
   background-size: cover;
+  background-position: center;
+  background-clip: content-box;
+  background-origin: content-box;
   left: 0 !important;
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  display: none;
+  /* display: none; */
+  content: "" !important;
 }
 
 .swiper-button-next {
-  background: url("../public/btn-next.png") no-repeat center center;
+  background-image: url("/btn-next.png");
   background-size: cover;
+  background-position: center;
+  background-clip: content-box;
+  background-origin: content-box;
   width: 40px !important;
   right: 0 !important;
 }
@@ -44,7 +51,7 @@ a {
 }
 
 .swiper-slide .swiper-button-prev {
-  background-image: url("../public/left-arrow.png");
+  background-image: url("/left-arrow.png");
   width: 40px;
   background-size: cover;
   background-position: center;
@@ -54,7 +61,7 @@ a {
 }
 
 .swiper-slide .swiper-button-next {
-  background-image: url("../public/right-arrow.png");
+  background-image: url("/right-arrow.png");
   width: 40px;
   background-size: cover;
   background-position: center;
