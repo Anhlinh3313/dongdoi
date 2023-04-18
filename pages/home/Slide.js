@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import styles from "../../styles/Home.module.css"
+import styles from "../../styles/Slide.module.css"
 import SwiperCore, { EffectCoverflow, Navigation, Pagination } from "swiper/core";
 import { Keyboard, Scrollbar } from "swiper";
 SwiperCore.use([EffectCoverflow, Navigation, Pagination]);
@@ -66,12 +66,12 @@ export default function Deck() {
                     <SwiperSlide
                         key={index}
                         className={
-                            styles.swiper_fixed_width_300
+                            styles["swiper_fixed_width_300"]
                         }
                     >
                         <div>
-                            <div className={styles.slide_overlay}>
-                                <div className={styles.slidetext}>
+                            <div className={styles["slide_overlay"]}>
+                                <div className={styles["slidetext"]}>
                                 </div>
                             </div>
                             <div>
