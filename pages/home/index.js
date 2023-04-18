@@ -40,7 +40,6 @@ function Home() {
                     <div className={styles.banner_sider_connent}>
                         <BannerSlider />
                     </div>
-
                 </div>
                 <section className={styles.event} id="section-event">
                     <div className={styles.event_text}>
