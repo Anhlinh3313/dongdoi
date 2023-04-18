@@ -1,13 +1,6 @@
 import "../styles/tailwind.scss";
 import "../styles/globals.css";
 import "../styles/sport-table.scss";
-import "../styles/DetailMatch.scss";
-import "../styles/HeaderDetailsMatch.scss";
-import "../styles/Analysis.css";
-import "../styles/CompareOdds.css";
-import "../styles/DataHistory.scss";
-import "../styles/rank-table.scss";
-import "../styles/europe-odds.scss";
 
 import ReState from "@useState/ReState";
 import Menu from "../app/project/Menu";
