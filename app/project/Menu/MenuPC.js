@@ -40,7 +40,7 @@ const MenuPC = () => {
     },
     {
       element: (
-        <Link href={"#about"}>
+        <Link href={"#about-us"}>
           <a>
             <div className={Styles.menu_bottom_item}>VỀ CHÚNG TÔI</div>
           </a>
@@ -52,7 +52,7 @@ const MenuPC = () => {
     },
     {
       element: (
-        <Link href={"/linh-vuc"}>
+        <Link href={"#active-type"}>
           <a>
             <div className={Styles.menu_bottom_item}>CÁC LĨNH VỰC HOẠT ĐỘNG</div>
           </a>
@@ -64,7 +64,7 @@ const MenuPC = () => {
     },
     {
       element: (
-        <Link href={"/lien-he"}>
+        <Link href={"#contact"}>
           <a>
             <div className={Styles.menu_bottom_item}>LIÊN HỆ</div>
           </a>

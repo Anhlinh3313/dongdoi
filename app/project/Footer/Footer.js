@@ -3,18 +3,18 @@ import Styles from "../../../styles/Footer.module.css";
 
 const Footer = () => {
   return (
-    <div className={Styles["footer"]}>
+    <div className={Styles["footer"]} id="contact">
       <div className={Styles["footer-container"]}>
         <div className={Styles["footer-container-item"]}>
           <div className={Styles["footer-title"]}>
-              <h2>VỀ CHÚNG TÔI</h2>
+            <h2>VỀ CHÚNG TÔI</h2>
           </div>
           <div className={Styles["footer-line"]}>
             <div className={Styles["line"]}></div>
           </div>
           <div className={Styles["footer-container-profile"]}>
             <div className={Styles["footer-container-profile-img"]}>
-              <img src="./img_icon1.png"/>
+              <img src="./img_icon1.png" />
             </div>
             <div className={Styles["footer-container-profile-text"]} >
               <p>Địa chỉ: 240D5 đường Đoàn Hoàn Minh, Phường 6, TP. Bến Tre</p>
@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
           <div className={Styles["footer-container-profile"]}>
             <div className={Styles["footer-container-profile-img"]}>
-              <img src="./img_icon2.png"/>
+              <img src="./img_icon2.png" />
             </div>
             <div className={Styles["footer-container-profile-text"]} >
               <p>Hotline: 0877552277</p>
@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
           <div className={Styles["footer-container-profile"]}>
             <div className={Styles["footer-container-profile-img"]}>
-              <img src="./img_icon3.png"/>
+              <img src="./img_icon3.png" />
             </div>
             <div className={Styles["footer-container-profile-text"]} >
               <p>Email: admin@mystore.com</p>
