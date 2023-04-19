@@ -8,7 +8,7 @@ import React, {
 import Styles from "./style/MenuMobile.module.css";
 import { useRouter } from "next/router";
 import IconTop from "./IconMenu/IconTop";
-import stylesCss from "../../../styles/MenuCSS/MenuMobile.module.css";
+import stylesCss from "../../../styles/MenuCSS/Menu.module.css";
 import DrawerMenu from "./Drawer";
 
 const MenuMobile = () => {
