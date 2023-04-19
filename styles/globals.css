@@ -567,6 +567,20 @@ iframe {
     width: 30px !important;
     height: 30px !important;
   }
+
+  .swiper-3d {
+    perspective: 300px !important;
+  }
+
+  .swiper-slide .swiper-button-prev,
+  .swiper-slide .swiper-button-next {
+    display: none;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+  }
 }
 
 img {

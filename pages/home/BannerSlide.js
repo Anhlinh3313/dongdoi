@@ -1,7 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from 'swiper';
-import styles from "../../styles/Home.module.css"
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -38,9 +37,9 @@ function SwiperComponent() {
     return (
         <div className="swiper-banner">
             <Swiper
-                slidesPerView={2}
+                slidesPerView={1}
                 centeredSlides={false}
-                slidesPerGroupSkip={2}
+                slidesPerGroupSkip={1}
                 spaceBetween={30}
                 grabCursor={true}
                 breakpoints={{
@@ -49,7 +48,7 @@ function SwiperComponent() {
                         spaceBetween: 20
                     },
                     480: {
-                        slidesPerView: 1,
+                        slidesPerView: 2,
                         spaceBetween: 10
                     }
 

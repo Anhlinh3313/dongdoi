@@ -316,6 +316,7 @@
 .event_text div {
   font-weight: 600;
   font-size: 20px;
+  text-align: center;
 }
 
 .event_line {
@@ -328,11 +329,13 @@
 
 .event_slide {
   position: relative;
+  max-width: 100%;
 }
 
 
 
 @media (max-width: 600px) {
+
   .grid {
     width: 100%;
     flex-direction: column;
