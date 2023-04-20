@@ -98,3 +98,27 @@
     padding-left: 200px;
     padding-top: 25px;
 }
+
+
+@media screen and (max-width: 600px) {
+    .activity-type-title{
+        font-size: 20px;
+    }
+    .line{
+        width: 50%;
+    }
+    .container-title-text{
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .container-title-detail-text{
+        font-size: 12px;
+    }
+    .container-title-detail-depression-text{
+        font-size: 10px;
+    }
+    .container-list-detail{
+        padding-left: 50px;
+        font-size: 8px;
+    }
+}

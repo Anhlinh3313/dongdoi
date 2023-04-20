@@ -1958,7 +1958,7 @@ img {
   display: inline-block;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .ant-modal-body {
     padding: 10px;
   }

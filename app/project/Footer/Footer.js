@@ -40,7 +40,6 @@ const Footer = () => {
         <div className={Styles["footer-container-item"]}>
           <div className={Styles["footer-container-text"]}>
             <img style={{width: '350px'}} src="/logo.png"/>
-            {/* <span className={Styles["footer-container-left"]}>DONGDOI.</span><span className={Styles["footer-container-right"]}>COM</span> */}
           </div>
         </div>
       </div>
