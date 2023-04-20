@@ -7,7 +7,7 @@ const Footer = () => {
       <div className={Styles["footer-container"]}>
         <div className={Styles["footer-container-item"]}>
           <div className={Styles["footer-title"]}>
-            <h2>VỀ CHÚNG TÔI</h2>
+            <h2>VẠN SỰ TÙY DUYÊN</h2>
           </div>
           <div className={Styles["footer-line"]}>
             <div className={Styles["line"]}></div>

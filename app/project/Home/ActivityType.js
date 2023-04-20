@@ -6,7 +6,7 @@ function ActivityType({ }) {
             <div className={styles["activity-type"]} id="active-type">
                 <div className={styles["activity-type-page"]}>
                     <div className={styles["activity-type-title"]}>
-                        <h2>VỀ CHÚNG TÔI</h2>
+                        <h2>CÁC LĨNH VỰC HOẠT ĐỘNG</h2>
                     </div>
                     <div className={styles["activity-type-line"]}>
                         <div className={styles["line"]}></div>
