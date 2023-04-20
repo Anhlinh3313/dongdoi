@@ -240,7 +240,6 @@
   position: relative;
 }
 
-
 .swiper_container {
   width: 100%;
   padding-top: 50px;
@@ -322,15 +321,14 @@
   margin: 25px 0;
   width: 60%;
   background-color: #FFDB20;
-  height: 5px;
-  border-radius: 6px;
+  height: 3px;
+  border-radius: 3px;
 }
 
 .event_slide {
   position: relative;
+  width: 100%;
 }
-
-
 
 @media (max-width: 600px) {
   .grid {
@@ -490,3 +488,25 @@
 .new-card-item {
   width: calc(100% - 12px);
 }
+
+@media only screen and (max-width: 600px) {
+  .event_text-title{
+     font-size: 20px !important;
+  }
+  .event_text-detail{
+    font-size: 15px !important;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .banner_sider_connent{
+    padding: 20px 50px;
+    /* max-width: 1000px; */
+    position: relative;
+    width: 100%;
+  }
+
+}
+
+
+

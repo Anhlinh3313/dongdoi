@@ -43,8 +43,8 @@ function Home() {
                 </div>
                 <section className={styles["event"]} id="section-event">
                     <div className={styles["event_text"]}>
-                        <h1>TIN TỨC - SỰ KIỆN</h1>
-                        <div>Hãy cập nhật những dự án và chương trình mới nhất của chúng tôi. Và đồng hành lan tỏa những điều thiện!</div>
+                        <h1 className={styles["event_text-title"]}>TIN TỨC - SỰ KIỆN</h1>
+                        <div className={styles["event_text-detail"]}>Hãy cập nhật những dự án và chương trình mới nhất của chúng tôi. Và đồng hành lan tỏa những điều thiện!</div>
                         <div className={styles["event_line"]}></div>
                     </div>
 

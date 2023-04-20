@@ -30,7 +30,7 @@ const MenuPC = () => {
       element: (
         <Link href={"#section-event"}>
           <a>
-            <div className={Styles.menu_bottom_item}>TIN TỨC - SỰ KIỆN</div>
+            <div className={stylesCss["menu_bottom_item"]}>TIN TỨC - SỰ KIỆN</div>
           </a>
         </Link>
       ),
@@ -42,7 +42,7 @@ const MenuPC = () => {
       element: (
         <Link href={"#about-us"}>
           <a>
-            <div className={Styles.menu_bottom_item}>VỀ CHÚNG TÔI</div>
+            <div className={stylesCss["menu_bottom_item"]}>VỀ CHÚNG TÔI</div>
           </a>
         </Link>
       ),
@@ -54,7 +54,7 @@ const MenuPC = () => {
       element: (
         <Link href={"#active-type"}>
           <a>
-            <div className={Styles.menu_bottom_item}>CÁC LĨNH VỰC HOẠT ĐỘNG</div>
+            <div className={stylesCss["menu_bottom_item"]}>CÁC LĨNH VỰC HOẠT ĐỘNG</div>
           </a>
         </Link>
       ),
@@ -66,7 +66,7 @@ const MenuPC = () => {
       element: (
         <Link href={"#contact"}>
           <a>
-            <div className={Styles.menu_bottom_item}>LIÊN HỆ</div>
+            <div className={stylesCss["menu_bottom_item"]}>LIÊN HỆ</div>
           </a>
         </Link>
       ),
@@ -78,21 +78,18 @@ const MenuPC = () => {
 
   return (
     <>
-      <div>
-        <div className={stylesCss["menu-container"]}>
-          <div className={stylesCss["navMenu-container"]}>
-            <img className={stylesCss.logo} src="./logo.png" alt="logo" />
-            <ul className={stylesCss["menu-warpper"]}>
-              {menuList?.map((val, key) => {
-                return <Fragment key={key}>{val.element}</Fragment>;
-              })}
-            </ul>
+      <div className={stylesCss["menu-container"]}>
+        <div className={stylesCss["navMenu-container"]}>
+          <img className={stylesCss.logo} src="./logo.png" alt="logo" />
+          <div className={stylesCss["menu-warpper"]}>
+            {menuList?.map((val, key) => {
+              return  <Fragment key={key}>{val.element}</Fragment>;
+            })}
           </div>
         </div>
       </div>
       {menuScroll && (
         <div
-          className={Styles.arowTop}
           onClick={() => {
             scrollView.top();
           }}

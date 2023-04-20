@@ -14,7 +14,9 @@ function AboutUS({ }) {
                     <div className={styles["aboutUS-container"]}>
                         <div className={styles["aboutUS-container-detail"]}>
                             <div className={styles["aboutUS-container-item"]}>
-                                <div className={styles["aboutUS-container-item-img1"]}></div>
+                                <div className={styles["aboutUS-container-item-img"]}>
+                                    <img className={styles["aboutUS-item-img"]} src="/img_container1.png"/>
+                                </div>
                                 <div>
                                     <p className={styles["aboutUS-container-item-text"]}>
                                         Quỹ Thiện Tâm thành lập ngày 03/10/2006 (trên cơ sở chuyển đổi từ Quỹ Thiện Tâm thuộc Công ty Cổ phần Vincom) theo Quyết định số 755 / QĐ-BNV ngày 22/8/2012 của Bộ Nội Vụ.
@@ -22,7 +24,9 @@ function AboutUS({ }) {
                                 </div>
                             </div>
                             <div className={styles["aboutUS-container-item"]}>
-                                <div className={styles["aboutUS-container-item-img2"]}></div>
+                                <div className={styles["aboutUS-container-item-img"]}>
+                                    <img className={styles["aboutUS-item-img"]} src="/img_container2.png"/>
+                                </div>
                                 <div>
                                     <p className={styles["aboutUS-container-item-text"]}>
                                         Quỹ Thiện Tâm thành lập ngày 03/10/2006 (trên cơ sở chuyển đổi từ Quỹ Thiện Tâm thuộc Công ty Cổ phần Vincom) theo Quyết định số 755 / QĐ-BNV ngày 22/8/2012 của Bộ Nội Vụ.
@@ -30,7 +34,9 @@ function AboutUS({ }) {
                                 </div>
                             </div>
                             <div className={styles["aboutUS-container-item"]}>
-                                <div className={styles["aboutUS-container-item-img3"]}></div>
+                                <div className={styles["aboutUS-container-item-img"]}>
+                                    <img className={styles["aboutUS-item-img"]} src="/img_container3.png"/>
+                                </div>
                                 <div>
                                     <p className={styles["aboutUS-container-item-text"]}>
                                         Quỹ Thiện Tâm thành lập ngày 03/10/2006 (trên cơ sở chuyển đổi từ Quỹ Thiện Tâm thuộc Công ty Cổ phần Vincom) theo Quyết định số 755 / QĐ-BNV ngày 22/8/2012 của Bộ Nội Vụ.
@@ -38,7 +44,9 @@ function AboutUS({ }) {
                                 </div>
                             </div>
                             <div className={styles["aboutUS-container-item"]}>
-                                <div className={styles["aboutUS-container-item-img4"]}></div>
+                                <div className={styles["aboutUS-container-item-img"]}>
+                                    <img className={styles["aboutUS-item-img"]} src="/img_container4.png"/>
+                                </div>
                                 <div>
                                     <p className={styles["aboutUS-container-item-text"]}>
                                         Quỹ Thiện Tâm thành lập ngày 03/10/2006 (trên cơ sở chuyển đổi từ Quỹ Thiện Tâm thuộc Công ty Cổ phần Vincom) theo Quyết định số 755 / QĐ-BNV ngày 22/8/2012 của Bộ Nội Vụ.
