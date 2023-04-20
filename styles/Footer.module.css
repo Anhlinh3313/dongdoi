@@ -17,6 +17,9 @@
   line-height: 42px;
   color: #000000;
 }
+.footer-title h2{
+  font-weight: 900 !important;
+}
 .footer-line{
   width: 100%;
   text-align: -webkit-center;

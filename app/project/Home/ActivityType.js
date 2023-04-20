@@ -16,7 +16,7 @@ function ActivityType({ }) {
                             <div className={styles["activity-type-container-item-img1"]}></div>
                             <div className={styles["activity-type-container-item-text"]}>
                                 <div className={styles["container-title"]}>
-                                    <h3 className={styles["container-title-text"]}>VỀ CHÚNG TÔI</h3>
+                                    <h3 className={styles["container-title-text"]}>VĂN HÓA GIÁO DỤC</h3>
                                 </div>
                                 <div className={styles["container-title-detail"]}>
                                     <p className={styles["container-title-detail-text"]}>PHÁT TRIỂN NGUỒN LỰC CỐT LÕI CỦA XÃ HÔI...</p>
