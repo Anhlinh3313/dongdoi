@@ -6,29 +6,10 @@ import "swiper/css/pagination";
 import styles from "../../styles/Slide.module.css"
 import SwiperCore, { EffectCoverflow, Navigation, Pagination } from "swiper/core";
 import { Keyboard, Scrollbar } from "swiper";
+import { BUNNY_URL } from "../../app/@function/wsCode";
 SwiperCore.use([EffectCoverflow, Navigation, Pagination]);
 
-
-export default function Deck() {
-
-    const listSlide = [
-        {
-            image: "./slide-5.png"
-        },
-        {
-            image: "./slide-4.png"
-        },
-        {
-            image: "./slide-1.png"
-        },
-        {
-            image: "./slide-3.png"
-        },
-        {
-            image: "./slide-2.png"
-        },
-    ]
-
+const Deck = ({listSlide}) => {
     return (
         <div className="swiper-slide">
             <Swiper
@@ -36,7 +17,7 @@ export default function Deck() {
                 grabCursor={false}
                 centeredSlides={true}
                 // autoHeight={true}
-                initialSlide={Math.floor((listSlide.length || 0 - 1) / 2) || 0}
+                initialSlide={Math.floor((listSlide?.length || 0 - 1) / 2) || 0}
                 slidesPerView={"auto"}
                 slidesPerGroupSkip={1}
                 keyboard={{
@@ -62,7 +43,7 @@ export default function Deck() {
                 modules={[Keyboard, Scrollbar]}
                 className="mySwiperSlide"
             >
-                {listSlide.map((i, index) => (
+                {listSlide?.map((i, index) => (
                     <SwiperSlide
                         key={index}
                         className={
@@ -76,7 +57,7 @@ export default function Deck() {
                             </div>
                             <div>
                                 <img
-                                    src={i.image}
+                                    src={BUNNY_URL+"/"+i?.thumb}
                                 />
                             </div>
                         </div>
@@ -89,3 +70,4 @@ export default function Deck() {
         </div>
     );
 }
+export default Deck

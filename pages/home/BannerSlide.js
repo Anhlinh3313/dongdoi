@@ -3,37 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from 'swiper';
 import "swiper/css";
 import "swiper/css/navigation";
+import { BUNNY_URL } from "../../app/@function/wsCode";
 
 SwiperCore.use([Navigation]);
 
-function SwiperComponent() {
-    const listSlide = [
-        {
-            image: "./banner-slide-1.png"
-        },
-        {
-            image: "./banner-slide-2.png"
-        },
-        {
-            image: "./banner-slide-1.png"
-        },
-        {
-            image: "./banner-slide-2.png"
-        },
-        {
-            image: "./banner-slide-1.png"
-        },
-        {
-            image: "./banner-slide-2.png"
-        },
-        {
-            image: "./banner-slide-1.png"
-        },
-        {
-            image: "./banner-slide-2.png"
-        },
-    ]
-
+function SwiperComponent({listBannerSlider}) {
     return (
         <div className="swiper-banner">
             <Swiper
@@ -57,8 +31,8 @@ function SwiperComponent() {
                 className="mySwiper"
 
             >
-                {listSlide?.map((value, index) => (
-                    <SwiperSlide key={index}><img src={value.image} /></SwiperSlide>
+                {listBannerSlider?.map((value, index) => (
+                    <SwiperSlide key={index}><img src={BUNNY_URL+"/"+value?.link} /></SwiperSlide>
                 ))}
 
             </Swiper>

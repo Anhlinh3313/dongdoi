@@ -1,58 +1,49 @@
+import axios from "axios";
 import styles from "../../../styles/HomeCSS/AboutUS.module.css";
+import { useEffect, useState } from "react";
+import { API_URL, BUNNY_URL } from "@function/wsCode";
 
 function AboutUS({ }) {
+
+    const [listAboutUS, setListAboutUS] = useState([]);
+    const [title, setTitle] = useState("");
+
+    useEffect(() => {
+        const getData = async () => {
+        const listAboutUS = await axios.get(`${API_URL}/api/post/getByMenuSlug/ve-chung-toi`);
+            if(listAboutUS && listAboutUS.data){
+                setListAboutUS(listAboutUS.data?.data);
+                setTitle(listAboutUS.data?.data[0]?.menu?.menuName)
+            }
+        }
+        getData();
+      }, []);
+
     return (
         <>
             <div className={styles["aboutUS"]} id="about-us">
                 <div className={styles["aboutUS-page"]}>
                     <div className={styles["aboutUS-title"]}>
-                        <h2>VỀ CHÚNG TÔI</h2>
+                        <h2>{title}</h2>
                     </div>
                     <div className={styles["aboutUS-line"]}>
                         <div className={styles["line"]}></div>
                     </div>
                     <div className={styles["aboutUS-container"]}>
                         <div className={styles["aboutUS-container-detail"]}>
-                            <div className={styles["aboutUS-container-item"]}>
-                                <div className={styles["aboutUS-container-item-img"]}>
-                                    <img className={styles["aboutUS-item-img"]} src="/img_container1.png"/>
-                                </div>
-                                <div>
-                                    <p className={styles["aboutUS-container-item-text"]}>
-                                        Quỹ Thiện Tâm thành lập ngày 03/10/2006 (trên cơ sở chuyển đổi từ Quỹ Thiện Tâm thuộc Công ty Cổ phần Vincom) theo Quyết định số 755 / QĐ-BNV ngày 22/8/2012 của Bộ Nội Vụ.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className={styles["aboutUS-container-item"]}>
-                                <div className={styles["aboutUS-container-item-img"]}>
-                                    <img className={styles["aboutUS-item-img"]} src="/img_container2.png"/>
-                                </div>
-                                <div>
-                                    <p className={styles["aboutUS-container-item-text"]}>
-                                        Quỹ Thiện Tâm thành lập ngày 03/10/2006 (trên cơ sở chuyển đổi từ Quỹ Thiện Tâm thuộc Công ty Cổ phần Vincom) theo Quyết định số 755 / QĐ-BNV ngày 22/8/2012 của Bộ Nội Vụ.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className={styles["aboutUS-container-item"]}>
-                                <div className={styles["aboutUS-container-item-img"]}>
-                                    <img className={styles["aboutUS-item-img"]} src="/img_container3.png"/>
-                                </div>
-                                <div>
-                                    <p className={styles["aboutUS-container-item-text"]}>
-                                        Quỹ Thiện Tâm thành lập ngày 03/10/2006 (trên cơ sở chuyển đổi từ Quỹ Thiện Tâm thuộc Công ty Cổ phần Vincom) theo Quyết định số 755 / QĐ-BNV ngày 22/8/2012 của Bộ Nội Vụ.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className={styles["aboutUS-container-item"]}>
-                                <div className={styles["aboutUS-container-item-img"]}>
-                                    <img className={styles["aboutUS-item-img"]} src="/img_container4.png"/>
-                                </div>
-                                <div>
-                                    <p className={styles["aboutUS-container-item-text"]}>
-                                        Quỹ Thiện Tâm thành lập ngày 03/10/2006 (trên cơ sở chuyển đổi từ Quỹ Thiện Tâm thuộc Công ty Cổ phần Vincom) theo Quyết định số 755 / QĐ-BNV ngày 22/8/2012 của Bộ Nội Vụ.
-                                    </p>
-                                </div>
-                            </div>
+                            {
+                                listAboutUS?.map((item, index) =>(
+                                    <div key={index} className={styles["aboutUS-container-item"]}>
+                                        <div className={styles["aboutUS-container-item-img"]}>
+                                            <img className={styles["aboutUS-item-img"]} src={BUNNY_URL+"/"+item?.thumb}/>
+                                        </div>
+                                        <div className={styles["aboutUS-container-item-text"]} dangerouslySetInnerHTML={{
+                                                __html: item?.description,
+                                            }}>
+                                        </div>
+                                    </div>
+                                ))
+                            }
                         </div>
                     </div>
                 </div>

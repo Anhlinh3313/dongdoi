@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
         <div className={Styles["footer-container-item"]}>
           <div className={Styles["footer-container-text"]}>
-            <img style={{width: '350px'}} src="/logo.png"/>
+            <img src="/logo.png"/>
           </div>
         </div>
       </div>

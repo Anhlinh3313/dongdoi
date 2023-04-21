@@ -3,7 +3,7 @@ import HomePage from "./home"
 import AboutUS from "../app/project/Home/AboutUS";
 import ActivityType from "../app/project/Home/ActivityType";
 
-function Home({ }) {
+function Home({}) {
   const [showChild, setShowChild] = useState(false);
 
   useEffect(() => {
