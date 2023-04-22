@@ -87,7 +87,7 @@
         padding: 0px 2px;
     }
     .aboutUS-container-item-text p{
-        font-size: 9px;
+        font-size: 12px;
         padding: 0px 10px;
     }
     .aboutUS-container-item-img img{
@@ -105,3 +105,19 @@
         padding-bottom: 30px;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .aboutUS-container-item-img img{
+        width: 50% !important;
+    }
+    .aboutUS-container-detail{
+        display: unset;
+        padding-top: 20px;
+    }
+    .aboutUS-page{
+        max-width: 1200px;
+        height: 100%;
+    }
+ 
+}
+

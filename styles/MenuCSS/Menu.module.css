@@ -10,13 +10,12 @@
 }
 
 .navMenu-container {
-    padding: 0px 150px;
     margin: 0 auto;
     display: flex;
     max-width: 1200px;
     font-size: 13px;
     color: #fff;
-    gap: 0 200px;
+    gap: 0 50px;
     align-items: center;
 }
 
@@ -24,8 +23,8 @@
     display: flex;
     justify-content: space-between;
     height: 100%;
-    width: 1100px;
     margin: auto;
+    gap: 0 50px !important;
 }
 
 .navbar-item {
@@ -77,7 +76,6 @@
     color: #000000;
     font-weight: 700;
     position: relative;
-    white-space: nowrap;
 }
 
 @media screen and (max-width: 600px) {
@@ -91,9 +89,9 @@
         margin: 0 auto;
         display: flex;
         max-width: 1200px;
-        font-size: 7px !important;
+        font-size: 10px !important;
         color: #fff;
-        gap: 0 15px !important;
+        gap: 0 0px !important;
         align-items: center;
     }
     .menu_bottom_item {
@@ -103,16 +101,14 @@
     .menu-warpper{
         width: 100% !important;
         justify-content: flex-start !important;
+        gap: 0 0px !important;
     }
     .menu_bottom_item {
-        display: block;
         padding: 19px 0px 18px 10px;
-        font-size: 7px !important;
+        font-size: 10px !important;
         line-height: 100%;
         color: #000000;
         font-weight: 700;
-        position: relative;
-        white-space: nowrap;
     }
   
 }
@@ -129,15 +125,23 @@
         max-width: 1200px;
         font-size: 7px !important;
         color: #fff;
-        gap: 0 15px !important;
+        gap: 0 5px !important;
         align-items: center;
     }
     .menu_bottom_item {
-        padding: 19px 0px 18px 13px !important; 
+        padding: 19px 0px 18px 10px;
+        font-size: 10px !important;
+        line-height: 100%;
+        color: #000000;
+        font-weight: 700;
     }
 }
 @media screen and (max-width: 325px) {
     .menu_bottom_item{
-        font-size: 5px !important;
+        padding: 19px 0px 18px 10px;
+        font-size: 10px !important;
+        line-height: 100%;
+        color: #000000;
+        font-weight: 700;
     } 
 }
