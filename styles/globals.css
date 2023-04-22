@@ -555,6 +555,12 @@ iframe {
   height: 425px;
 }
 
+
+.mySwiper .swiper-banner-image {
+  width: 290px !important;
+  max-height: 170px !important;
+}
+
 @media only screen and (max-width: 600px) {
   iframe {
     object-fit: cover;

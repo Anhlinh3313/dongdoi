@@ -9,64 +9,70 @@ import { Keyboard, Scrollbar } from "swiper";
 import { BUNNY_URL } from "../../app/@function/wsCode";
 SwiperCore.use([EffectCoverflow, Navigation, Pagination]);
 
-const Deck = ({listSlide}) => {
+const Deck = ({ listSlide }) => {
     return (
         <div className="swiper-slide">
-            <Swiper
-                effect={"coverflow"}
-                grabCursor={false}
-                centeredSlides={true}
-                // autoHeight={true}
-                initialSlide={Math.floor((listSlide?.length || 0 - 1) / 2) || 0}
-                slidesPerView={"auto"}
-                slidesPerGroupSkip={1}
-                keyboard={{
-                    enabled: true,
-                }}
-                coverflowEffect={{
-                    rotate: 5,
-                    stretch: 5,
-                    depth: 150,
-                    modifier: 2,
-                    slideShadows: true
-                }}
-                height={300}
-                scrollbar={true}
-                navigation={{
-                    prevEl: '.swiper-slide .swiper-button-prev',
-                    nextEl: '.swiper-slide .swiper-button-next'
-                }}
-                pagination={{
-                    el: '.swiper-pagination-container',
-                    clickable: true
-                }}
-                modules={[Keyboard, Scrollbar]}
-                className="mySwiperSlide"
-            >
-                {listSlide?.map((i, index) => (
-                    <SwiperSlide
-                        key={index}
-                        className={
-                            styles["swiper_fixed_width_300"]
-                        }
+            {listSlide.length > 0 && (
+                <>
+                    <Swiper
+                        effect={"coverflow"}
+                        grabCursor={false}
+                        centeredSlides={true}
+                        autoHeight={true}
+                        initialSlide={Math.floor((listSlide?.length || 0 - 1) / 2) || 0}
+                        slidesPerView={"auto"}
+                        slidesPerGroupSkip={1}
+                        keyboard={{
+                            enabled: true,
+                        }}
+                        coverflowEffect={{
+                            rotate: 5,
+                            stretch: 5,
+                            depth: 150,
+                            modifier: 2,
+                            slideShadows: true
+                        }}
+                        scrollbar={true}
+                        navigation={{
+                            prevEl: '.swiper-slide .swiper-button-prev',
+                            nextEl: '.swiper-slide .swiper-button-next'
+                        }}
+                        pagination={{
+                            el: '.swiper-pagination-container',
+                            clickable: true
+                        }}
+                        modules={[Keyboard, Scrollbar]}
+                        className="mySwiperSlide"
+                        loop={true}
+                        loopAdditionalSlides={1}
+                        loopedSlides={1}
                     >
-                        <div>
-                            <div className={styles["slide_overlay"]}>
-                                <div className={styles["slidetext"]}>
+                        {listSlide?.map((i, index) => (
+                            <SwiperSlide
+                                key={index}
+                                className={
+                                    styles["swiper_fixed_width_300"]
+                                }
+                            >
+                                <div>
+                                    <div className={styles["slide_overlay"]}>
+                                        <div className={styles["slidetext"]}>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src={BUNNY_URL + "/" + i?.thumb}
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <img
-                                    src={BUNNY_URL+"/"+i?.thumb}
-                                />
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-            <div className="swiper-pagination-container"></div>
-            <div className="swiper-button-prev"></div>
-            <div className="swiper-button-next"></div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                    <div className="swiper-pagination-container"></div>
+                    <div className="swiper-button-prev"></div>
+                    <div className="swiper-button-next"></div>
+                </>
+            )}
         </div>
     );
 }

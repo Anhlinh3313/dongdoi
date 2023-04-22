@@ -7,7 +7,7 @@ import { BUNNY_URL } from "../../app/@function/wsCode";
 
 SwiperCore.use([Navigation]);
 
-function SwiperComponent({listBannerSlider}) {
+function SwiperComponent({ listBannerSlider }) {
     return (
         <div className="swiper-banner">
             <Swiper
@@ -19,10 +19,12 @@ function SwiperComponent({listBannerSlider}) {
                 breakpoints={{
                     768: {
                         slidesPerView: 2,
+                        slidesPerGroupSkip: 2,
                         spaceBetween: 20
                     },
                     480: {
                         slidesPerView: 2,
+                        slidesPerGroupSkip: 2,
                         spaceBetween: 10
                     }
 
@@ -32,7 +34,7 @@ function SwiperComponent({listBannerSlider}) {
 
             >
                 {listBannerSlider?.map((value, index) => (
-                    <SwiperSlide key={index}><img src={BUNNY_URL+"/"+value?.link} /></SwiperSlide>
+                    <SwiperSlide key={index}><img className="swiper-banner-image" src={BUNNY_URL + "/" + value?.link} /></SwiperSlide>
                 ))}
 
             </Swiper>
