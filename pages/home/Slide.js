@@ -61,7 +61,7 @@ const Deck = ({ listSlide }) => {
                                     </div>
                                     <div>
                                         <img
-                                            src={BUNNY_URL + "/" + i?.thumb}
+                                            src={BUNNY_URL + "/" + i?.thumb} alt={i?.thumb}
                                         />
                                     </div>
                                 </div>
