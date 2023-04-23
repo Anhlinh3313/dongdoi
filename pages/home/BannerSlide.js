@@ -18,8 +18,8 @@ function SwiperComponent({ listBannerSlider }) {
                 grabCursor={true}
                 breakpoints={{
                     768: {
-                        slidesPerView: 2,
-                        slidesPerGroupSkip: 2,
+                        slidesPerView: 4,
+                        slidesPerGroupSkip: 4,
                         spaceBetween: 20
                     },
                     480: {

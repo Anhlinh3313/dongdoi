@@ -236,7 +236,7 @@
 
 .banner_sider_connent {
   padding: 20px 50px;
-  max-width: 1000px;
+  max-width: 1200px;
   position: relative;
 }
 
@@ -340,13 +340,6 @@
 
   .banner_sider_connent {
     max-width: 400px;
-  }
-}
-
-
-@media (min-width: 768px) {
-  .banner_sider_connent {
-    max-width: 700px;
   }
 }
 
@@ -499,16 +492,18 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .event_text-title{
-     font-size: 20px !important;
+  .event_text-title {
+    font-size: 20px !important;
   }
-  .event_text-detail{
+
+  .event_text-detail {
     font-size: 15px !important;
     text-align: center;
   }
 }
+
 @media only screen and (max-width: 1000px) {
-  .banner_sider_connent{
+  .banner_sider_connent {
     padding: 20px 50px;
     /* max-width: 1000px; */
     position: relative;
@@ -516,6 +511,3 @@
   }
 
 }
-
-
-
