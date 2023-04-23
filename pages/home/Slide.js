@@ -59,9 +59,7 @@ const Deck = ({ listSlide }) => {
                                         </div>
                                     </div>
                                     <div>
-                                        <img
-                                            src={BUNNY_URL + "/" + i?.thumb}
-                                        />
+                                        <img src={BUNNY_URL + "/" + i?.thumb} alt={i?.thumb} />
                                     </div>
                                 </div>
                             </SwiperSlide>
