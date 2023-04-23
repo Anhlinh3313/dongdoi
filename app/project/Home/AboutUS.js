@@ -10,14 +10,14 @@ function AboutUS({ }) {
 
     useEffect(() => {
         const getData = async () => {
-        const listAboutUS = await axios.get(`${API_URL}/api/post/getByMenuSlug/ve-chung-toi`);
-            if(listAboutUS && listAboutUS.data){
+            const listAboutUS = await axios.get(`${API_URL}/api/post/getByMenuSlug/ve-chung-toi`);
+            if (listAboutUS && listAboutUS.data) {
                 setListAboutUS(listAboutUS.data?.data);
                 setTitle(listAboutUS.data?.data[0]?.menu?.menuName)
             }
         }
         getData();
-      }, []);
+    }, []);
 
     return (
         <>
@@ -32,21 +32,21 @@ function AboutUS({ }) {
                     <div className={styles["aboutUS-container"]}>
                         <div className={styles["aboutUS-container-detail"]}>
                             {
-                                listAboutUS?.map((item, index) =>(
+                                listAboutUS?.map((item, index) => (
                                     <>
                                         {
                                             index < 4 ?
-                                            <div key={index} className={styles["aboutUS-container-item"]}>
-                                                <div className={styles["aboutUS-container-item-img"]}>
-                                                    <img className={styles["aboutUS-item-img"]} src={BUNNY_URL+"/"+item?.thumb}/>
-                                                </div>
-                                                <div className={styles["aboutUS-container-item-text"]} dangerouslySetInnerHTML={{
+                                                <div key={index} className={styles["aboutUS-container-item"]}>
+                                                    <div className={styles["aboutUS-container-item-img"]}>
+                                                        <img className={styles["aboutUS-item-img"]} src={BUNNY_URL + "/" + item?.thumb} alt={item.thumb} />
+                                                    </div>
+                                                    <div className={styles["aboutUS-container-item-text"]} dangerouslySetInnerHTML={{
                                                         __html: item?.description,
                                                     }}>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            :
-                                            <></>
+                                                :
+                                                <></>
                                         }
                                     </>
                                 ))

@@ -575,7 +575,7 @@ iframe {
   }
 
   .swiper-3d {
-    perspective: 300px !important;
+    perspective: 250px !important;
   }
 
   .swiper-slide .swiper-button-prev,

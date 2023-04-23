@@ -9,8 +9,8 @@ function ActivityType({ }) {
 
     useEffect(() => {
         const getData = async () => {
-        const listActivityType = await axios.get(`${API_URL}/api/post/getByMenuSlug/cac-linh-vuc-hoat-dong`);
-            if(listActivityType && listActivityType.data){
+            const listActivityType = await axios.get(`${API_URL}/api/post/getByMenuSlug/cac-linh-vuc-hoat-dong`);
+            if (listActivityType && listActivityType.data) {
                 setListActivityType(listActivityType.data?.data);
                 setTitle(listActivityType.data?.data[0]?.menu?.menuName)
             }
@@ -30,40 +30,40 @@ function ActivityType({ }) {
                     </div>
                     <div className={styles["activity-type-container"]}>
                         {
-                            listActivityType?.map((item, index)=>(
+                            listActivityType?.map((item, index) => (
                                 <div key={index} className={styles["activity-type-container-detail"]}>
                                     {
-                                        index% 2 == 0? 
+                                        index % 2 == 0 ?
                                             <div className={styles["activity-type-container-item-img"]}>
-                                                <img src={BUNNY_URL+"/"+item?.thumb}/>
+                                                <img src={BUNNY_URL + "/" + item?.thumb} alt={item?.thumb} />
                                             </div>
-                                        :
-                                        <></>
+                                            :
+                                            <></>
                                     }
-                                 
+
                                     <div className={styles["activity-type-container-item-text"]}>
                                         <div className={styles["container-title"]}>
                                             <h3 className={styles["container-title-text"]}>{item?.title}</h3>
                                         </div>
                                         <div className={styles["container-title-detail"]}>
-                                            <p className={styles["container-title-detail-text"]}  dangerouslySetInnerHTML={{
+                                            <p className={styles["container-title-detail-text"]} dangerouslySetInnerHTML={{
                                                 __html: item?.description,
                                             }}></p>
                                         </div>
                                         <div className={styles["container-title-detail"]}>
                                             <div className={styles["container-title-detail-depression-text"]}
-                                            dangerouslySetInnerHTML={{
-                                                __html: item?.content,
-                                            }}></div>
+                                                dangerouslySetInnerHTML={{
+                                                    __html: item?.content,
+                                                }}></div>
                                         </div>
                                     </div>
                                     {
-                                        index% 2 != 0? 
+                                        index % 2 != 0 ?
                                             <div className={styles["activity-type-container-item-img"]}>
-                                                <img src={BUNNY_URL+"/"+item?.thumb}/>
+                                                <img src={BUNNY_URL + "/" + item?.thumb} />
                                             </div>
-                                        :
-                                        <></>
+                                            :
+                                            <></>
                                     }
                                 </div>
                             ))

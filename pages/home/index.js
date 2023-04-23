@@ -14,47 +14,45 @@ function Home() {
     useEffect(() => {
         const getDataSlide = async () => {
             const dataaNewsEvents = await axios.get(`${API_URL}/api/post/getByMenuSlug/tin-tuc-su-kien`);
-            if(dataaNewsEvents && dataaNewsEvents.data){
+            if (dataaNewsEvents && dataaNewsEvents.data) {
                 setListNewEvents(dataaNewsEvents.data?.data);
                 setTitle(dataaNewsEvents.data?.data[0]?.menu?.menuName)
                 setDescription(dataaNewsEvents.data?.data[0]?.menu?.description)
             }
         }
-        const getDataBannerSlider= async () => {
+        const getDataBannerSlider = async () => {
             const dataBannerSlider = await axios.get(`${API_URL}/api/slide/getAll`);
-            if(dataBannerSlider && dataBannerSlider.data){
+            if (dataBannerSlider && dataBannerSlider.data) {
                 setListBannerSlider(dataBannerSlider.data);
             }
         }
         getDataSlide();
         getDataBannerSlider();
-      }, []);
+    }, []);
 
 
     return (
         <>
-            <div className="body">
-                <div className={styles["banner"]}>
-                    <img src="./banner.png" alt="Banner" />
-                </div>
-                <div className={styles["banner_sider"]}>
-                    <div className={styles["banner_sider_connent"]}>
-                        <BannerSlider listBannerSlider={listBannerSlider}/>
-                    </div>
-                </div>
-                <section className={styles["event"]} id="section-event">
-                    <div className={styles["event_text"]}>
-                        <h1 className={styles["event_text-title"]}>{title}</h1>
-                        <div className={styles["event_text-detail"]}>{description}</div>
-                        <div className={styles["event_line"]}></div>
-                    </div>
-
-                    <div className={styles["event_slide"]}>
-                        <Slide listSlide={listNewEvents}/>
-                    </div>
-
-                </section>
+            <div className={styles["banner"]}>
+                <img src="./banner.png" alt="Banner" />
             </div>
+            <div className={styles["banner_sider"]}>
+                <div className={styles["banner_sider_connent"]}>
+                    <BannerSlider listBannerSlider={listBannerSlider} />
+                </div>
+            </div>
+            <section className={styles["event"]} id="section-event">
+                <div className={styles["event_text"]}>
+                    <h1 className={styles["event_text-title"]}>{title}</h1>
+                    <div className={styles["event_text-detail"]}>{description}</div>
+                    <div className={styles["event_line"]}></div>
+                </div>
+
+                <div className={styles["event_slide"]}>
+                    <Slide listSlide={listNewEvents} />
+                </div>
+
+            </section>
         </>
     );
 }

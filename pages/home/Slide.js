@@ -12,13 +12,12 @@ SwiperCore.use([EffectCoverflow, Navigation, Pagination]);
 const Deck = ({ listSlide }) => {
     return (
         <div className="swiper-slide">
-            {listSlide.length > 0 && (
+            {listSlide?.length > 0 && (
                 <>
                     <Swiper
                         effect={"coverflow"}
                         grabCursor={false}
                         centeredSlides={true}
-                        autoHeight={true}
                         initialSlide={Math.floor((listSlide?.length || 0 - 1) / 2) || 0}
                         slidesPerView={"auto"}
                         slidesPerGroupSkip={1}
@@ -60,9 +59,7 @@ const Deck = ({ listSlide }) => {
                                         </div>
                                     </div>
                                     <div>
-                                        <img
-                                            src={BUNNY_URL + "/" + i?.thumb}
-                                        />
+                                        <img src={BUNNY_URL + "/" + i?.thumb} alt={i?.thumb} />
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -73,6 +70,9 @@ const Deck = ({ listSlide }) => {
                     <div className="swiper-button-next"></div>
                 </>
             )}
+            <div className="swiper-pagination-container"></div>
+            <div className="swiper-button-prev"></div>
+            <div className="swiper-button-next"></div>
         </div>
     );
 }

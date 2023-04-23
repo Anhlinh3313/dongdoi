@@ -14,18 +14,19 @@ function SwiperComponent({ listBannerSlider }) {
                 slidesPerView={1}
                 centeredSlides={false}
                 slidesPerGroupSkip={1}
-                spaceBetween={30}
+                spaceBetween={10}
                 grabCursor={true}
+                loop={true}
                 breakpoints={{
                     768: {
                         slidesPerView: 4,
                         slidesPerGroupSkip: 4,
-                        spaceBetween: 20
+                        spaceBetween: 30
                     },
                     480: {
                         slidesPerView: 2,
                         slidesPerGroupSkip: 2,
-                        spaceBetween: 10
+                        spaceBetween: 20
                     }
 
                 }}
@@ -34,7 +35,7 @@ function SwiperComponent({ listBannerSlider }) {
 
             >
                 {listBannerSlider?.map((value, index) => (
-                    <SwiperSlide key={index}><img className="swiper-banner-image" src={BUNNY_URL + "/" + value?.link} /></SwiperSlide>
+                    <SwiperSlide key={index}><img className="swiper-banner-image" src={BUNNY_URL + "/" + value?.link} alt={value?.link} /></SwiperSlide>
                 ))}
 
             </Swiper>
