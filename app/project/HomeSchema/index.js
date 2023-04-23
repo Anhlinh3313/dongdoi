@@ -20,12 +20,12 @@ const HomeSchema = (props) => {
 
   useEffect(() => {
     getAllGroup().then((res) => {
-      if((res.status === "success")){
-        dispatch(setDataApp({ groups: res.data}))
+      if ((res.status === "success")) {
+        dispatch(setDataApp({ groups: res.data }))
       }
     })
-  },[dispatch]);
-  
+  }, [dispatch]);
+
   return (
     <>
       <div>
@@ -79,16 +79,16 @@ const HomeSchema = (props) => {
           ></meta>
           {schema
             ? schema.map((item, index) => {
-                return (
-                  <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                      __html: item.script,
-                    }}
-                    key={index}
-                  ></script>
-                );
-              })
+              return (
+                <script
+                  type="application/ld+json"
+                  dangerouslySetInnerHTML={{
+                    __html: item.script,
+                  }}
+                  key={index}
+                ></script>
+              );
+            })
             : null}
         </Head>
       </div>
