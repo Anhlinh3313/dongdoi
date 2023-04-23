@@ -46,6 +46,8 @@ const MenuPC = () => {
       });
   }, []);
 
+  console.log(menuBottom)
+
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -71,8 +73,8 @@ const MenuPC = () => {
               viewBox="0 0 24 24"
               strokeLinecap="round"
               strokeLinejoin="round"
-              height="1em"
-              width="1em"
+              height="20px"
+              width="20px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <desc></desc>
@@ -81,14 +83,16 @@ const MenuPC = () => {
               <line x1="4" y1="12" x2="20" y2="12"></line>
               <line x1="4" y1="18" x2="20" y2="18"></line>
             </svg>
-            <div className={showMenu ? stylesCss['hamburger active'] : stylesCss['hamburger']}>
-              <span>test 1</span>
-              <span>test 2</span>
-              <span>test 3</span>
+            <div className={showMenu ? stylesCss["menu-toggle-show"] : stylesCss["menu-toggle-hide"]}>
+              <span>
+                {menuBottom?.map((val, key) => {
+                  return val.element;
+                })}
+              </span>
             </div>
           </div>
         </div>
-      </nav>
+      </nav >
       {menuScroll && (
         <div
           onClick={() => {
@@ -97,7 +101,8 @@ const MenuPC = () => {
         >
           <IconTop />
         </div>
-      )}
+      )
+      }
     </>
   );
 };
