@@ -60,7 +60,7 @@ function ActivityType({ }) {
                                     {
                                         index % 2 != 0 ?
                                             <div className={styles["activity-type-container-item-img"]}>
-                                                <img src={BUNNY_URL + "/" + item?.thumb} />
+                                                <img src={BUNNY_URL + "/" + item?.thumb}  alt={item?.thumb}/>
                                             </div>
                                             :
                                             <></>

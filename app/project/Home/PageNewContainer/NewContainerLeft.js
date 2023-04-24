@@ -9,14 +9,14 @@ const NewContainerLeft = ({listDataContainer}) => {
           <>
             <div key={index} className={styles["col-left-item"]} >
               <h3 className={styles["title-left"]}>
-              {item.title}
+              {item?.title}
               </h3>
               <div className={styles["content-left"]}>
                 <div className={styles["img-left"]}>
-                  <img src={item.img}/>
+                  <img src={item?.img} alt={item?.img}/>
                 </div>
                 <div className={styles["content-content-left"]}>
-                  <span>{item.description}</span>
+                  <span>{item?.description}</span>
                 </div>
               </div>
             </div>
