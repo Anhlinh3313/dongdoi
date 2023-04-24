@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/css/navigation";
@@ -10,13 +10,38 @@ import { BUNNY_URL } from "../../app/@function/wsCode";
 SwiperCore.use([EffectCoverflow, Navigation, Pagination]);
 
 const Deck = ({ listSlide }) => {
+    const [loopedSlides, setLoopedSlides] = useState(1);
+    const swiperRef = useRef(null);
+    const initialSlide = Math.floor((listSlide?.length - 1) / 2);
+    const handleSlideChange = (swiper) => {
+        const activeIndex = swiper.activeIndex;
+        if (activeIndex > initialSlide) {
+            setLoopedSlides(2);
+        } else if (activeIndex < initialSlide) {
+            setLoopedSlides(3);
+        } else {
+            setLoopedSlides(1);
+        }
+    }
+
+    useEffect(() => {
+        if (swiperRef.current) {
+            swiperRef.current.swiper.params.loopedSlides = loopedSlides;
+            swiperRef.current.swiper.update();
+        }
+    }, [loopedSlides]);
+
     return (
         <div className="swiper-slide">
             {listSlide?.length > 0 && (
                 <>
                     <Swiper
+                        onSlideChange={(swiper) => handleSlideChange(swiper)}
+                        loopedSlides={loopedSlides}
+                        loop={true}
+                        ref={swiperRef}
                         effect={"coverflow"}
-                        grabCursor={false}
+                        grabCursor={true}
                         centeredSlides={true}
                         initialSlide={Math.floor((listSlide?.length || 0 - 1) / 2) || 0}
                         slidesPerView={"auto"}
@@ -42,8 +67,6 @@ const Deck = ({ listSlide }) => {
                         }}
                         modules={[Keyboard, Scrollbar]}
                         className="mySwiperSlide"
-                        loop={true}
-                        loopedSlides={1}
                     >
                         {listSlide?.map((i, index) => (
                             <SwiperSlide
@@ -64,9 +87,6 @@ const Deck = ({ listSlide }) => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                    <div className="swiper-pagination-container"></div>
-                    <div className="swiper-button-prev"></div>
-                    <div className="swiper-button-next"></div>
                 </>
             )}
             <div className="swiper-pagination-container"></div>

@@ -32,22 +32,18 @@ function AboutUS() {
                         <div className={styles["aboutUS-container-detail"]}>
                             {
                                 listAboutUS?.map((item, index) => (
-                                    <>
-                                        {
-                                            index < 4 ?
-                                                <div key={index} className={styles["aboutUS-container-item"]}>
-                                                    <div className={styles["aboutUS-container-item-img"]}>
-                                                        <img className={styles["aboutUS-item-img"]} src={BUNNY_URL + "/" + item?.thumb} alt={item.thumb} />
-                                                    </div>
-                                                    <div className={styles["aboutUS-container-item-text"]} dangerouslySetInnerHTML={{
-                                                        __html: item?.description,
-                                                    }}>
-                                                    </div>
-                                                </div>
-                                                :
-                                                <></>
-                                        }
-                                    </>
+                                    index < 4 ?
+                                        <div key={index} className={styles["aboutUS-container-item"]}>
+                                            <div className={styles["aboutUS-container-item-img"]}>
+                                                <img className={styles["aboutUS-item-img"]} src={BUNNY_URL + "/" + item?.thumb} alt={item.thumb} />
+                                            </div>
+                                            <div className={styles["aboutUS-container-item-text"]} dangerouslySetInnerHTML={{
+                                                __html: item?.description,
+                                            }}>
+                                            </div>
+                                        </div>
+                                        :
+                                        ""
                                 ))
                             }
                         </div>

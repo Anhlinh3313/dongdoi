@@ -30,7 +30,6 @@ function Home() {
         getDataBannerSlider();
     }, []);
 
-
     return (
         <>
             <div className={styles["banner"]}>
