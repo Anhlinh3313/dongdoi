@@ -43,7 +43,6 @@ const Deck = ({ listSlide }) => {
                         modules={[Keyboard, Scrollbar]}
                         className="mySwiperSlide"
                         loop={true}
-                        loopAdditionalSlides={1}
                         loopedSlides={1}
                     >
                         {listSlide?.map((i, index) => (

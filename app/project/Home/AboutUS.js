@@ -3,8 +3,7 @@ import styles from "../../../styles/HomeCSS/AboutUS.module.css";
 import { useEffect, useState } from "react";
 import { API_URL, BUNNY_URL } from "@function/wsCode";
 
-function AboutUS({ }) {
-
+function AboutUS() {
     const [listAboutUS, setListAboutUS] = useState([]);
     const [title, setTitle] = useState("");
 
