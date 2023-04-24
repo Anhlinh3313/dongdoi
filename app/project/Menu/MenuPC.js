@@ -46,8 +46,6 @@ const MenuPC = () => {
       });
   }, []);
 
-  console.log(menuBottom)
-
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
