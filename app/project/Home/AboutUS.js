@@ -32,10 +32,10 @@ function AboutUS() {
                         <div className={styles["aboutUS-container-detail"]}>
                             {
                                 listAboutUS?.map((item, index) => (
-                                    <>
+                                    <div key={index}>
                                         {
                                             index < 4 ?
-                                                <div key={index} className={styles["aboutUS-container-item"]}>
+                                                <div className={styles["aboutUS-container-item"]}>
                                                     <div className={styles["aboutUS-container-item-img"]}>
                                                         <img className={styles["aboutUS-item-img"]} src={BUNNY_URL + "/" + item?.thumb} alt={item.thumb} />
                                                     </div>
@@ -47,7 +47,7 @@ function AboutUS() {
                                                 :
                                                 <></>
                                         }
-                                    </>
+                                    </div>
                                 ))
                             }
                         </div>
