@@ -15,6 +15,7 @@
     align-items: center;
     grid-template-columns: auto auto auto;
     grid-row-gap: 20px;
+    min-height: 500px;
 }
 
 .grid-item {

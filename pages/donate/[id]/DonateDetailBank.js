@@ -1,66 +1,17 @@
 import { useEffect, useState } from "react";
 import styles from "../../../styles/Donate.module.css"
+import { API_URL } from "../../../app/@function/wsCode"
+import axios from "axios";
 
 function DonateDetail({ id }) {
-    const [bankInfo, setBankInfo] = useState([]);
-
-    const listBank = [
-        {
-            id: 1,
-            name: "BIDV",
-            img: "/BIDV.png",
-            qrCode: "/BIDV.png",
-            accountHolder: "Lê Văn A",
-            accountNumber: "123456789"
-        },
-        {
-            id: 2,
-            name: "Vietinbank",
-            img: "/Vietin.png",
-            qrCode: "/BIDV.png",
-            accountHolder: "Lê Văn B",
-            accountNumber: "123456789"
-        },
-        {
-            id: 3,
-            name: "ACB",
-            img: "/ACB.png",
-            qrCode: "/BIDV.png",
-            accountHolder: "Lê Văn C",
-            accountNumber: "123456789"
-        },
-        {
-            id: 4,
-            name: "Vietcombank",
-            img: "/Vietcom.png",
-            qrCode: "/BIDV.png",
-            accountHolder: "Lê Văn D",
-            accountNumber: "123456789"
-        },
-        {
-            id: 5,
-            name: "Techcombank",
-            img: "/Techcom.png",
-            qrCode: "/BIDV.png",
-            accountHolder: "Lê Văn E",
-            accountNumber: "123456789"
-        },
-        {
-            id: 6,
-            name: "MBbank",
-            img: "/MB.png",
-            qrCode: "/BIDV.png",
-            accountHolder: "Lê Văn F",
-            accountNumber: "123456789"
-        },
-    ]
+    const [listBank, setListBank] = useState([]);
 
     useEffect(() => {
-        listBank.forEach((item, index) => {
-            if (item.id === id) {
-                setBankInfo(item)
-            }
-        })
+        const getBankDetails = async () => {
+            const dataBank = await axios.get(`${API_URL}/api/accountBank/getByBankId/${id}`);
+            setListBank(dataBank?.data)
+        }
+        getBankDetails();
     }, [id]);
 
     function handleCopyBankNumber() {
@@ -106,25 +57,25 @@ function DonateDetail({ id }) {
                 <div className={styles["listbank-content-item"]}>
                     <div className={styles["listbank-item-info"]}>
                         <h5>NGÂN HÀNG CHUYỂN KHOẢN</h5>
-                        <h6>{bankInfo?.name}</h6>
+                        <h6>ACB</h6>
 
                         <h5>SỐ TÀI KHOẢN NGƯỜI NHẬN</h5>
                         <div className={styles["bank-number"]}>
-                            <h6 id="bank-number">{bankInfo?.accountNumber}</h6>
+                            <h6 id="bank-number">{listBank?.accountBank?.accountNo}</h6>
                             <img src="/copy-icon.png" onClick={handleCopyBankNumber} alt="copy-icon" />
                         </div>
 
 
                         <h5>TÊN NGƯỜI NHẬN</h5>
                         <div className={styles["bank-name"]}>
-                            <h6 id="bank-name">{bankInfo?.accountHolder}</h6>
+                            <h6 id="bank-name">{listBank?.accountBank?.accountName}</h6>
                             <img onClick={handleCopyBankName} src="/copy-icon.png" alt="copy-icon" />
                         </div>
                     </div>
                     <div className={styles["listbank-item-code"]}>
-                        <img className={styles["qrCode"]} src="/qrcode.png" alt="qr_code" />
+                        <img className={styles["qrCode"]} src={listBank?.qrDataURL} alt="qr_code" />
                         <h5>quét mã để lấy thông tin</h5>
-                        <button onClick={() => downloadImage(bankInfo?.qrCode)}>Tải xuống</button>
+                        <button onClick={() => downloadImage(listBank?.qrDataURL)}>Tải xuống</button>
                     </div>
                 </div>
 

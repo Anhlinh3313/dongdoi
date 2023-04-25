@@ -23,12 +23,7 @@ const Deck = ({ listSlide }) => {
             } else {
                 setLoopedSlides(2);
             }
-
-            console.log("activeIndex", activeIndex);
-            console.log("initialSlide", initialSlide);
-            console.log("loopedSlides", loopedSlides);
         }
-
     }
 
     useEffect(() => {
