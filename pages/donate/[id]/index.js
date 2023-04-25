@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { message } from 'antd';
 import styles from "../../../styles/Donate.module.css"
-import Listbank from "./ListBank"
+import DonateDetail from "./DonateDetail"
 import { useParams } from 'react-router-dom';
 
 
