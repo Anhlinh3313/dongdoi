@@ -56,7 +56,7 @@ const MenuPC = () => {
     <>
       <nav className={stylesCss["menu-container"]}>
         <div className={stylesCss["navMenu-container"]}>
-          <img className={stylesCss.logo} src="./logo.png" alt="logo" />
+          <img className={stylesCss.logo} src="/logo.png" alt="logo" />
           <div className={stylesCss["menu-warpper"]}>
             {menuBottom?.map((val, key) => {
               return <Fragment key={key}>{val.element}</Fragment>;
