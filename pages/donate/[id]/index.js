@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { message } from 'antd';
 import styles from "../../../styles/Donate.module.css"
-import DonateDetail from "./DonateDetail"
+import DonateDetailBank from "./DonateDetailBank"
 import { useParams } from 'react-router-dom';
 
 
@@ -66,7 +66,7 @@ function DonateDetail() {
                         </li>
                     )}
                 </ul>
-                <Listbank id={bankId} />
+                <DonateDetailBank id={bankId} />
             </div>
         </div>
     );
