@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "../../../styles/Donate.module.css"
 import { API_URL } from "../../../app/@function/wsCode"
 import axios from "axios";
+import { message } from 'antd';
 
 function DonateDetail({ id }) {
     const [listBank, setListBank] = useState([]);
@@ -57,7 +58,7 @@ function DonateDetail({ id }) {
                 <div className={styles["listbank-content-item"]}>
                     <div className={styles["listbank-item-info"]}>
                         <h5>NGÂN HÀNG CHUYỂN KHOẢN</h5>
-                        <h6>ACB</h6>
+                        <h6>{listBank?.accountBank?.bank?.code}</h6>
 
                         <h5>SỐ TÀI KHOẢN NGƯỜI NHẬN</h5>
                         <div className={styles["bank-number"]}>

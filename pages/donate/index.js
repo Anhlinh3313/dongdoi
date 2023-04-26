@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import styles from "../../styles/Donate.module.css"
 import { API_URL } from "../../app/@function/wsCode"
 import axios from "axios";
-import Item from "antd/lib/list/Item";
 
 function Donate() {
     const [listBank, setListBank] = useState([]);

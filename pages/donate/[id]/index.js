@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { message } from 'antd';
 import styles from "../../../styles/Donate.module.css"
 import DonateDetailBank from "./DonateDetailBank"
-import { useParams } from 'react-router-dom';
 import axios from "axios";
 import { API_URL } from "../../../app/@function/wsCode"
 import { useRouter } from 'next/router';
