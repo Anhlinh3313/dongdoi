@@ -12,7 +12,10 @@ function DonateDetail({ id }) {
             const dataBank = await axios.get(`${API_URL}/api/accountBank/getByBankId/${id}`);
             setListBank(dataBank?.data)
         }
-        getBankDetails();
+        if (id) {
+            getBankDetails();
+        }
+
     }, [id]);
 
     function handleCopyBankNumber() {

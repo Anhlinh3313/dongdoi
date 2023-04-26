@@ -172,10 +172,12 @@
     width: 300px;
     border-radius: 20px;
     padding: 20px 0;
+    text-align: center;
 }
 
 .listbank-item-code .qrCode {
     width: 50%;
+    margin: 0 auto;
 }
 
 .listbank-item-code h5 {

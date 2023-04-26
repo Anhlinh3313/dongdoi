@@ -31,7 +31,7 @@ const MenuPC = () => {
         const menuList = data?.map((item, i) => {
           return {
             element: (
-              <Link href={item.menuSlug || '/'}>
+              <Link href={"https://dongdoi.com/" + item.menuSlug || '/'}>
                 <a>
                   <div className={stylesCss["menu_bottom_item"]}>{item.menuName}</div>
                 </a>

@@ -9,7 +9,6 @@ import { useRouter } from 'next/router';
 function DonateDetail() {
     const router = useRouter();
     const { id } = router.query;
-
     const [listBank, setListBank] = useState([]);
 
     useEffect(() => {
