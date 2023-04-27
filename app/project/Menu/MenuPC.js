@@ -8,10 +8,12 @@ import React, {
 import IconTop from "./IconMenu/IconTop";
 import stylesCss from "../../../styles/MenuCSS/Menu.module.css";
 import { API_URL } from "@function/wsCode";
+import { useRouter } from 'next/router';
 
 const MenuPC = () => {
   const [menuScroll, setMenuScroll] = useState(false);
   const [menuBottom, setMenuBottom] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -31,11 +33,9 @@ const MenuPC = () => {
         const menuList = data?.map((item, i) => {
           return {
             element: (
-              <Link href={"#active-type"}>
-                <a>
-                  <div className={stylesCss["menu_bottom_item"]}>{item.menuName}</div>
-                </a>
-              </Link>
+              <a onClick={() => router.push(`/${item.menuSlug}`)}>
+                <div className={stylesCss["menu_bottom_item"]}>{item.menuName}</div>
+              </a>
             ),
             event: () => { },
             status: true,
@@ -56,7 +56,10 @@ const MenuPC = () => {
     <>
       <nav className={stylesCss["menu-container"]}>
         <div className={stylesCss["navMenu-container"]}>
-          <img className={stylesCss.logo} src="./logo.png" alt="logo" />
+          <a onClick={() => router.push("/home")}>
+            <img className={stylesCss.logo} src="/logo.png" alt="logo" />
+          </a>
+
           <div className={stylesCss["menu-warpper"]}>
             {menuBottom?.map((val, key) => {
               return <Fragment key={key}>{val.element}</Fragment>;
