@@ -46,7 +46,7 @@ const NewContainerRight = ({listDataContainer}) => {
         </div>
         <div className={styles["col-right-item-container"]}>
           <div className={styles["right-container"]}>
-            <img src="https://i1-thethao.vnecdn.net/2023/04/07/abs-cbn-doi-tuyen-bong-chuyen-2343-9673-1680837807.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=LVseaIOYNrj5fraUGdl28g"/>
+            <img src="https://i1-thethao.vnecdn.net/2023/04/07/abs-cbn-doi-tuyen-bong-chuyen-2343-9673-1680837807.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=LVseaIOYNrj5fraUGdl28g" alt="https://i1-thethao.vnecdn.net/2023/04/07/abs-cbn-doi-tuyen-bong-chuyen-2343-9673-1680837807.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=LVseaIOYNrj5fraUGdl28g"/>
             <div className={styles["right-container-title"]}> 
               <h4 className={styles["col-right-menu-top-tile-text"]}>Việt Nam đấu chủ nhà World Cup nữ</h4>
               <spa>NEW ZEALANDThầy trò HLV Mai Đức Chung sẽ đá giao hữu với New Zealand trước khai mạc FIFA World Cup nữ 2023. </spa>
@@ -74,7 +74,7 @@ const NewContainerRight = ({listDataContainer}) => {
         </div>
         <div className={styles["col-right-item-container"]}>
           <div className={styles["right-container"]}>
-            <img src="https://i1-thethao.vnecdn.net/2023/04/07/abs-cbn-doi-tuyen-bong-chuyen-2343-9673-1680837807.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=LVseaIOYNrj5fraUGdl28g"/>
+            <img src="https://i1-thethao.vnecdn.net/2023/04/07/abs-cbn-doi-tuyen-bong-chuyen-2343-9673-1680837807.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=LVseaIOYNrj5fraUGdl28g" alt="https://i1-thethao.vnecdn.net/2023/04/07/abs-cbn-doi-tuyen-bong-chuyen-2343-9673-1680837807.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=LVseaIOYNrj5fraUGdl28g"/>
             <div className={styles["right-container-title"]}> 
               <h4 className={styles["col-right-menu-top-tile-text"]}>Việt Nam đấu chủ nhà World Cup nữ</h4>
               <spa>NEW ZEALANDThầy trò HLV Mai Đức Chung sẽ đá giao hữu với New Zealand trước khai mạc FIFA World Cup nữ 2023. </spa>
@@ -122,7 +122,7 @@ const NewContainerRight = ({listDataContainer}) => {
         </div>
         <div className={styles["col-right-item-container"]}>
           <div className={styles["right-container"]}>
-            <img src="https://i1-thethao.vnecdn.net/2023/04/07/abs-cbn-doi-tuyen-bong-chuyen-2343-9673-1680837807.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=LVseaIOYNrj5fraUGdl28g"/>
+            <img src="https://i1-thethao.vnecdn.net/2023/04/07/abs-cbn-doi-tuyen-bong-chuyen-2343-9673-1680837807.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=LVseaIOYNrj5fraUGdl28g" alt="https://i1-thethao.vnecdn.net/2023/04/07/abs-cbn-doi-tuyen-bong-chuyen-2343-9673-1680837807.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=LVseaIOYNrj5fraUGdl28g"/>
             <div className={styles["right-container-title"]}> 
               <h4 className={styles["col-right-menu-top-tile-text"]}>Việt Nam đấu chủ nhà World Cup nữ</h4>
               <spa>NEW ZEALANDThầy trò HLV Mai Đức Chung sẽ đá giao hữu với New Zealand trước khai mạc FIFA World Cup nữ 2023. </spa>
@@ -180,7 +180,7 @@ const NewContainerRight = ({listDataContainer}) => {
         </div>
         <div className={styles["col-right-item-container"]}>
           <div className={styles["right-container-last"]}>
-            <img src="https://i1-thethao.vnecdn.net/2023/04/07/abs-cbn-doi-tuyen-bong-chuyen-2343-9673-1680837807.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=LVseaIOYNrj5fraUGdl28g"/>
+            <img src="https://i1-thethao.vnecdn.net/2023/04/07/abs-cbn-doi-tuyen-bong-chuyen-2343-9673-1680837807.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=LVseaIOYNrj5fraUGdl28g" alt="https://i1-thethao.vnecdn.net/2023/04/07/abs-cbn-doi-tuyen-bong-chuyen-2343-9673-1680837807.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=LVseaIOYNrj5fraUGdl28g"/>
             <div className={styles["right-container-title"]}> 
               <h4 className={styles["col-right-menu-top-tile-text"]}>Việt Nam đấu chủ nhà World Cup nữ</h4>
               <spa>NEW ZEALANDThầy trò HLV Mai Đức Chung sẽ đá giao hữu với New Zealand trước khai mạc FIFA World Cup nữ 2023. </spa>
