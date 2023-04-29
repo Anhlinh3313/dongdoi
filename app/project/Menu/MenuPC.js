@@ -56,7 +56,7 @@ const MenuPC = () => {
     <>
       <nav className={stylesCss["menu-container"]}>
         <div className={stylesCss["navMenu-container"]}>
-          <a onClick={() => router.push("/home")}>
+          <a onClick={() => router.push("/")}>
             <img className={stylesCss.logo} src="/logo.png" alt="logo" />
           </a>
 
