@@ -14,6 +14,7 @@ const MenuPC = () => {
   const [menuScroll, setMenuScroll] = useState(false);
   const [menuBottom, setMenuBottom] = useState([]);
   const router = useRouter();
+  const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -27,15 +28,20 @@ const MenuPC = () => {
   }, [typeof window !== "undefined" && window]);
 
   useEffect(() => {
+    const isActive = (path) => {
+      return router.pathname.includes(path);
+    };
+
     fetch(`${API_URL}/api/menu/getAll`)
       .then((res) => res.json())
       .then((data) => {
         const menuList = data?.map((item, i) => {
+          const active = isActive(item.menuSlug) ? stylesCss["menu_bottom_item_active"] : "";
           return {
             element: (
               <a onClick={() => router.push(`/${item.menuSlug}`)}>
-                <div className={stylesCss["menu_bottom_item"]}>{item.menuName}</div>
-              </a>
+                <div className={`${stylesCss["menu_bottom_item"]} ${active}`}>{item.menuName}</div>
+              </a >
             ),
             event: () => { },
             status: true,
@@ -44,9 +50,9 @@ const MenuPC = () => {
         });
         setMenuBottom(menuList);
       });
-  }, []);
+  }, [router.pathname]);
 
-  const [showMenu, setShowMenu] = useState(false);
+  console.log(menuBottom)
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
